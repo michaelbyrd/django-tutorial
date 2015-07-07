@@ -11,8 +11,8 @@
 
 ## Generic views
 - in /polls/views.py --> from django.views import generic
-- DetailView template --> \*<app name>/<model name>_detail.html*\
-- ListView template --> \*<app name>/<model name>_list.html*\
+- DetailView template --> \*<app name>/<model name>_detail.html\*
+- ListView template --> \*<app name>/<model name>_list.html\*
 
 # Resources
 - [VirtualEnv](http://docs.python-guide.org/en/latest/dev/virtualenvs/)
