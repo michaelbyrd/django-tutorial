@@ -35,5 +35,5 @@
 - [Django Tutorial][]
 
 
-[virtualenv]: https://docs.djangoproject.com/en/1.8/intro/tutorial01/
-[django tutorial]: http://docs.python-guide.org/en/latest/dev/virtualenvs/
+[virtualenv]: http://docs.python-guide.org/en/latest/dev/virtualenvs/
+[django tutorial]: https://docs.djangoproject.com/en/1.8/intro/tutorial01/
