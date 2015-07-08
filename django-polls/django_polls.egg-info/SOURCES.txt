@@ -1,0 +1,17 @@
+MANIFEST.in
+README.rst
+setup.py
+django_polls.egg-info/PKG-INFO
+django_polls.egg-info/SOURCES.txt
+django_polls.egg-info/dependency_links.txt
+django_polls.egg-info/top_level.txt
+polls/__init__.py
+polls/admin.py
+polls/models.py
+polls/tests.py
+polls/urls.py
+polls/views.py
+polls/static/polls/styles.css
+polls/templates/polls/question_detail.html
+polls/templates/polls/question_list.html
+polls/templates/polls/results.html
