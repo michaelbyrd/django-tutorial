@@ -1,10 +1,19 @@
 import datetime
 
-from django.utils import timezone
+from django.core.urlresolvers import reverse
 from django.test import TestCase
+from django.utils import timezone
 
 from .models import Question
 
+def create_question(question_text, days):
+    """
+    Creates a question with the given 'question_text' published the given number
+    of 'dats' offet to now (negative for questions published in the past,
+    positive for questions that have yet to be published).
+    """
+    time = timezone.now() + datetime.timedelta(days=days)
+    return Question.objects.create(question_text=question_text, pub_date=time)
 
 class QuestionMethodTests(TestCase):
 
@@ -13,8 +22,9 @@ class QuestionMethodTests(TestCase):
         was_published_recently() should return False for questions whose
         pub_date is in the future.
         """
-        time = timezone.now() + datetime.timedelta(days=30)
-        future_question = Question(pub_date=time)
+        # time = timezone.now() + datetime.timedelta(days=30)
+        # future_question = Question(pub_date=time)
+        future_question = create_question( "not much to ask", 30)
         result = future_question.was_published_recently()
         self.assertEqual(result, False)
 

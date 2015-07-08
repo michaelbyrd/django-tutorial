@@ -16,6 +16,9 @@
 
 # Testing
 - python manage.py test \<app name\> <-- run the test found in the \<app name\>
+- response.context(\<context object name\>) will return the objects used to
+  render the view
+- response.content will return the html (or json etc)
 
 # Resources
 - [VirtualEnv][]
