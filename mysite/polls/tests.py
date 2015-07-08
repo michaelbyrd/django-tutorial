@@ -47,3 +47,33 @@ class QuestionMethodTests(TestCase):
         recent_question = Question(pub_date=time)
         result = recent_question.was_published_recently()
         self.assertEqual(result, True)
+
+
+class QuestionViewTests(TestCase):
+    def test_index_view_with_no_questions(self):
+        """
+        If no questions exist, an appropriate message should be displated.
+        """
+        response = self.client.get(reverse('polls:index'))
+        self.assertEqual(response.status_code, 200)
+        self.assertContains(response, "No polls are available.")
+        self.assertQuerysetEqual(response.context['latest_question_list'], [])
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
