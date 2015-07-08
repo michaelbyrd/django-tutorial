@@ -14,9 +14,13 @@
 - DetailView template --> \<app name\>/\<model name\>_detail.html
 - ListView template --> \<app name\>/\<model name\>_list.html
 
+# Testing
+- python manage.py test \<app name\> <-- run the test found in the \<app name\>
+
 # Resources
 - [VirtualEnv][]
 - [Django Tutorial][]
+
 
 [:virtualenv] https://docs.djangoproject.com/en/1.8/intro/tutorial01/
 [:django tutorrial] http://docs.python-guide.org/en/latest/dev/virtualenvs/
