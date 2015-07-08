@@ -20,6 +20,16 @@
   render the view
 - response.content will return the html (or json etc)
 
+# Packaging the Polls app
+- move the polls directory into a django-polls directory ousite of mysite
+- create a file django-polls/README.rst
+- create django-polls/setup.py
+- create django-polls/MANIFEST.in <-- has recursive-include config commands
+- cd into django-polls and run: python setup.py sdist <-- this builds the
+  package
+- pip install --user django-polls/dist/django-polls-0.1.tar.gz (remove --user to
+  work with virtualenvwrapper
+
 # Resources
 - [VirtualEnv][]
 - [Django Tutorial][]
