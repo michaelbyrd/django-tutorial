@@ -16,6 +16,17 @@ def create_question(question_text, days):
     time = timezone.now() + datetime.timedelta(days=days)
     return Question.objects.create(question_text=question_text, pub_date=time)
 
+class QuestionIndexDetailTest(TestCase):
+    def test_detail_view_with_a_future_question(self):
+        """
+        The detail view of a question with a pub_date in the future should
+        return a 404 not found.
+        """
+        future_question = create_question(question_text="Future question.",
+                days=5)
+        response = self.client.get(reverse('polls:detail',
+            args=(future_question.id,)))
+        self.assertEqual(response.status_code, 404)
 
 class QuestionMethodTests(TestCase):
     def test_was_published_recently_with_future_question(self):
